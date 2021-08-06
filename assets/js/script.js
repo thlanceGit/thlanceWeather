@@ -16,9 +16,7 @@ var queryCity = {
     lat : 0,
     lon : 0,
 }
-//TODO store history arr into localStorage, on page load create history items for the 
-//array of objects stored in localStorage with .each
-
+//TODO fix user input valiation, breaks on various queries
 $('#searchBttn').click( function getInput () {
     queryCity.query = $('#search').val();
     searchStr = queryCity.query;
@@ -26,12 +24,8 @@ $('#searchBttn').click( function getInput () {
         searchArr = searchStr.split(',');
         queryCity.city = searchArr[0];
         queryCity.region = searchArr[1];
-        //newHistory = $('<button type="button" class="queryBtt">'+queryCity.city+', '+queryCity.region+'</button>');
-        //$('#queryHistory').append(newHistory);
     } else { 
         queryCity.city = $('#search').val();
-        //newHistory = $('<button type="button" class="queryBtt">'+queryCity.city+', '+queryCity.region+'</button>');
-        //$('#queryHistory').append(newHistory);
         console.log(queryCity);
         getGeocode(queryCity.city);
     }
@@ -133,9 +127,6 @@ function storeArray () {
     fillHistory();
 }
 
-//On page load and query submission save the lat/lon converted query into the search history bar
-
-//On query submission or search history click: Do the following to update current and future conditions 
 $("#searchHistory").on('click', '.queryBtt', function historySearch (e) {
     var historyTarget = $(e.target);
     searchStr = historyTarget[0].innerHTML;
@@ -145,7 +136,6 @@ $("#searchHistory").on('click', '.queryBtt', function historySearch (e) {
 });
 $("#searchHistory").on('click', '.clearBttn', function deleteEntry (e) { 
     var historyTarget = $(e.target).attr("id");
-    console.log(historyTarget)
     $("div[id*='"+historyTarget+"']").remove();
 });
 
@@ -163,4 +153,3 @@ function fillHistory (){
         localStorage.setItem('historyArr', '');
     }
 }
-//Convert weather conditions to icons and add to current and future condition cards

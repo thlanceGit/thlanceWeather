@@ -24,7 +24,7 @@
         <div id="queryBox">
             <div id="searchBox">
                 <h2>Search for a City:</h2>
-                <input id="search" type="text" placeholder="City name, State">
+                <input id="search" type="text" placeholder="City name, State" onfocus="this.value=''" onblur="(this.value=='')? this.value='':this.value;">
                 <button type="button" id="searchBttn">Get Weather!</button>
             </div>
             <div id="searchHistory">
