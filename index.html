@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Personal stylesheet-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!--Font Awesome icons link-->
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>-->
+    <!--Google Fonts link-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>-->
+    <title>thlance Weather Checker</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Weather Checker</h1>
+      <p class="lead">A simple weather app for a quick check</p>
+      <p id="currentTime" class="lead"></p>
+    </header>
+
+    <main id="mainContainer">
+        <div id="queryBox">
+            <div id="searchBox">
+                <h2>Search for a City:</h2>
+                <input id="search" type="text" placeholder="City name, State">
+                <button type="button" id="searchBttn">Get Weather!</button>
+            </div>
+            <div id="searchHistory">
+                <h2>Search History:</h2>
+                <div id="queryHistory"></div>
+            </div>
+        </div>
+        <div id="resultsBox">
+            <div id="currentCondBox">
+                <h3>Current Conditions in: </h3><h3 id="cityName"></h3>
+                <div id="currentCard">
+                    <div id="currentTemp">
+                        <h4>Temp: </h4>
+                        <p id="curTempBox"></p>
+                        </div>
+                    <div id="currentWind">
+                        <h4>Wind:</h4>
+                        <p id="curWindBox"></p>
+                        </div>
+                    <div id="currentHum">
+                        <h4>Humidity:</h4>
+                        <p id="curHumBox"></p>
+                        </div>
+                    <div id="currentUV">
+                        <h4>UV Index:</h4>
+                        <p id="curUvBox"></p>
+                        </div>
+                </div>
+            </div>
+            <div id="forcastBox">
+                <h4>5-Day Forcast: </h4>
+                <div id="forcastCard">
+                    <div class="forcastDay" id="oneDayAhead">
+                        <h5 class="forcastDT"></h5>
+                        <img></img>
+                        <div><p>Temp: </p><p class="forcastTemp"></p><p> °F</p></div>
+                        <div><p>Wind: </p><p class="forcastWind"></p><p> MPH</p></div>
+                        <div><p>Humidity: </p><p class="forcastHum"></p><p> %</p></div>
+                    </div>
+                    <div class="forcastDay" id="twoDaysAhead">
+                        <h5 class="forcastDT"></h5>
+                        <img></img>
+                        <div><p>Temp: </p><p class="forcastTemp"></p><p> °F</p></div>
+                        <div><p>Wind: </p><p class="forcastWind"></p><p> MPH</p></div>
+                        <div><p>Humidity: </p><p class="forcastHum"></p><p> %</p></div>
+                    </div>
+                    <div class="forcastDay" id="threeDaysAhead">
+                        <h5 class="forcastDT"></h5>
+                        <img></img>
+                        <div><p>Temp: </p><p class="forcastTemp"></p><p> °F</p></div>
+                        <div><p>Wind: </p><p class="forcastWind"></p><p> MPH</p></div>
+                        <div><p>Humidity: </p><p class="forcastHum"></p><p> %</p></div>
+                    </div>
+                    <div class="forcastDay" id="fourDaysAhead">
+                        <h5 class="forcastDT"></h5>
+                        <img></img>
+                        <div><p>Temp: </p><p class="forcastTemp"></p><p> °F</p></div>
+                        <div><p>Wind: </p><p class="forcastWind"></p><p> MPH</p></div>
+                        <div><p>Humidity: </p><p class="forcastHum"></p><p> %</p></div>
+                    </div>
+                    <div class="forcastDay" id="fiveDaysAhead">
+                        <h5 class="forcastDT"></h5>
+                        <img></img>
+                        <div><p>Temp: </p><p class="forcastTemp"></p><p> °F</p></div>
+                        <div><p>Wind: </p><p class="forcastWind"></p><p> MPH</p></div>
+                        <div><p>Humidity: </p><p class="forcastHum"></p><p> %</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Jquery JS link-->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <!--Moment JS link-->
+    <script src="./assets/js/moment.min.js"></script>
+    <!--Personal JS link-->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

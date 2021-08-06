@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2em;
+    background-color: steelblue;
+    color: whitesmoke;
+    font-size: 1.5em;
+    padding: .5rem;
+    border-bottom: .3rem double goldenrod;
+    border-top: .3rem double goldenrod;
+}
+
+h2 {
+    padding: .5rem;
+}
+
+#mainContainer {
+    height: 100vh;
+    display: flex;
+}
+
+#queryBox {
+    display: flex;
+    justify-self: left;
+    flex-direction: column;
+    align-items: center;
+    border-right: .3rem double goldenrod;
+    background-color: steelblue;
+    width: 30%;
+}
+
+#searchBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 1.5em;
+    padding-bottom: 1rem;
+    border-bottom: .3rem double goldenrod;
+    text-decoration: none;
+    width: 100%;
+}
+
+#search {
+    line-height: 2em;
+    font-size: 1em;
+    border: .1rem double goldenrod;
+    width: 90%;
+    text-align: center;
+}
+
+#search::-webkit-input-placeholder {
+    text-align: center;
+}
+
+#searchBttn {
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .5em;
+    border: .1rem double goldenrod;
+    background-color: teal;
+    color: whitesmoke;
+    font-size: .75em;
+    width: 50%;
+}
+
+#searchHistory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 1.5em;
+    border-bottom: .3rem double goldenrod;
+    height: 100vh;
+    width: 100%;
+}
+
+#queryHistory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.queryBtt {
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .5em;
+    border: .1rem double goldenrod;
+    background-color: teal;
+    color: whitesmoke;
+    font-size: .75em;
+}
+
+.clearBttn {
+    margin-top: 1rem;
+    padding: .5rem;
+    border-radius: .5em;
+    border: .1rem double goldenrod;
+    background-color: teal;
+    color: whitesmoke;
+    font-size: .75em;
+}
+
+#resultsBox {
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    background-color: blanchedalmond;
+    color: steelblue;
+    width: 70%;
+}
+
+#currentCondBox {
+    line-height: 2em;
+    font-size: 1.5em;
+    border-bottom: .3rem double goldenrod;
+    padding-bottom: 1rem;
+}
+
+#currentCondBox h3 {
+    display: inline;
+    margin-bottom: .3rem;
+}
+
+#currentCondBox:first-child {
+    margin-left: 1rem;
+}
+
+#cityName {
+    padding-left: 1rem;
+}
+
+#currentCard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#currentCard > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: steelblue;
+    padding: 1rem;
+    border-radius: .5em;
+    border: .3rem double goldenrod;
+    color: whitesmoke;
+}
+
+#currentCard > div h4 {
+    font-weight: bold;
+    font-size: .75em;
+}
+
+#currentUV > p {
+    padding: 0 .5rem 0 .5rem;
+    border-radius: .5em;
+}
+
+.low {
+    background-color: green;
+}
+
+.mod {
+    background-color: greenyellow;
+    color : slategray;
+}
+
+.high {
+    background-color: orangered;
+    color: slategray;
+}
+
+.vhigh {
+    background-color: red;
+    color: black;
+}
+
+.xhigh {
+    background-color: violet;
+    color: black;
+}
+
+#forcastBox {
+    line-height: 2em;
+    font-size: 1.5em;
+}
+
+#forcastBox h4 {
+    padding-left: 1rem;
+}
+
+#forcastCard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.forcastDay  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: steelblue;
+    padding: 1rem;
+    border-radius: .5em;
+    border: .3rem double goldenrod;
+    color: whitesmoke;
+    width: 10em;
+}
+
+.forcastDay p {
+    display: inline;
+}
