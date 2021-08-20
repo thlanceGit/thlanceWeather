@@ -18,12 +18,14 @@ var queryCity = {
 }
 //TODO fix user input valiation, breaks on various queries
 $('#searchBttn').click( function getInput () {
+    console.log("...searching")
     queryCity.query = $('#search').val();
     searchStr = queryCity.query;
     if (searchStr.includes(',')) {
         searchArr = searchStr.split(',');
         queryCity.city = searchArr[0];
         queryCity.region = searchArr[1];
+        getGeocode(queryCity.city,queryCity.region);
     } else { 
         queryCity.city = $('#search').val();
         console.log(queryCity);
@@ -33,7 +35,7 @@ $('#searchBttn').click( function getInput () {
 
 function getGeocode (city,state,country) {
     $.ajax({
-        url : "http://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+","+country+"&limit="+1+"&appid="+openWeatherApiKey+"",
+        url : "https://api.openweathermap.org/geo/1.0/direct?q="+city+","+state+","+country+"&limit="+1+"&appid="+openWeatherApiKey+"",
         method : 'GET',
         error : function(jqXHR,status,text){
             console.log("The request returned error status: "+status+" or the text: "+text);
